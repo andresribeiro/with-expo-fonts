@@ -1,0 +1,63 @@
+{
+  "name": "with-expo-fonts",
+  "version": "1.0.0",
+  "description": "Make your expo apps start faster by loading fonts at build time",
+  "main": "app.plugin.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com/andresribeiro/with-expo-fonts.git"
+  },
+  "keywords": [
+    "react-native",
+    "expo",
+    "fonts",
+    "startup-time",
+    "plugin",
+    "plugins",
+    "expo-plugins",
+    "expo-dev-client",
+    "javascript",
+    "rn"
+  ],
+  "author": "André Ribeiro",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andresribeiro/with-expo-fonts/issues"
+  },
+  "homepage": "https://github.com/andresribeiro/with-expo-fonts#readme",
+  "scripts": {
+    "build": "expo-module build",
+    "clean": "expo-module clean",
+    "test": "expo-module test",
+    "prepare": "expo-module prepare",
+    "prepublishOnly": "expo-module prepublishOnly",
+    "expo-module": "expo-module"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint",
+    "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-emoji"
+    }
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "cz-emoji": "^1.3.2-canary.2",
+    "expo": "^48.0.5",
+    "expo-module-scripts": "^3.0.7",
+    "rome": "^11.0.0",
+    "simple-git-hooks": "^2.8.1",
+    "typescript": "^4.9.5"
+  },
+  "peerDependencies": {
+    "expo": ">=47.0.0"
+  },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    }
+  }
+}
