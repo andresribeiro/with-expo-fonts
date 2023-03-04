@@ -34,7 +34,6 @@
     "expo-module": "expo-module"
   },
   "simple-git-hooks": {
-    "pre-commit": "pnpm lint",
     "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
   },
   "config": {
