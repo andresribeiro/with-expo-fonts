@@ -1,6 +1,6 @@
 {
   "name": "with-expo-fonts",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Make your expo apps start faster by loading fonts at build time",
   "main": "app.plugin.js",
   "repository": {
@@ -28,8 +28,6 @@
   "scripts": {
     "build": "expo-module build",
     "clean": "expo-module clean",
-    "test": "expo-module test",
-    "prepare": "expo-module prepare",
     "prepublishOnly": "expo-module prepublishOnly",
     "expo-module": "expo-module"
   },

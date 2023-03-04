@@ -1,23 +1,25 @@
-import { withDangerousMod } from "@expo/config-plugins";
-import { copyFileSync, existsSync, mkdirSync, readdirSync } from "node:fs";
-import { resolve } from "node:path";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const config_plugins_1 = require("@expo/config-plugins");
+const node_fs_1 = require("node:fs");
+const node_path_1 = require("node:path");
 const ANDROID_FONTS_PATHS = "android/app/src/main/assets/fonts";
 const PROJECT_FONTS_PATH = "assets/fonts";
 const withExpoFonts = (config) => {
-    return withDangerousMod(config, [
+    return (0, config_plugins_1.withDangerousMod)(config, [
         "android",
         (config) => {
-            const projectAndroidFontsPath = resolve(config.modRequest.projectRoot, ANDROID_FONTS_PATHS);
-            if (!existsSync(projectAndroidFontsPath)) {
-                mkdirSync(projectAndroidFontsPath, { recursive: true });
+            const projectAndroidFontsPath = (0, node_path_1.resolve)(config.modRequest.projectRoot, ANDROID_FONTS_PATHS);
+            if (!(0, node_fs_1.existsSync)(projectAndroidFontsPath)) {
+                (0, node_fs_1.mkdirSync)(projectAndroidFontsPath, { recursive: true });
             }
-            const fontsFiles = readdirSync(PROJECT_FONTS_PATH);
+            const fontsFiles = (0, node_fs_1.readdirSync)(PROJECT_FONTS_PATH);
             fontsFiles.forEach((fontFile) => {
-                copyFileSync(`${PROJECT_FONTS_PATH}/${fontFile}`, `${projectAndroidFontsPath}/${fontFile}`);
+                (0, node_fs_1.copyFileSync)(`${PROJECT_FONTS_PATH}/${fontFile}`, `${projectAndroidFontsPath}/${fontFile}`);
             });
             return config;
         },
     ]);
 };
-export default withExpoFonts;
+exports.default = withExpoFonts;
 //# sourceMappingURL=withExpoFonts.js.map

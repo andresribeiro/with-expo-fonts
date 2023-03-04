@@ -1,1 +1,1 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":"AAAA,OAAO,EAAE,OAAO,EAAE,MAAM,iBAAiB,CAAC","sourcesContent":["export { default } from \"./withExpoFonts\";\n"]}
+{"version":3,"file":"index.js","sourceRoot":"","sources":["../src/index.ts"],"names":[],"mappings":";;;;;;AAAA,iDAA0C;AAAjC,yHAAA,OAAO,OAAA","sourcesContent":["export { default } from \"./withExpoFonts\";\n"]}
