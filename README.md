@@ -5,10 +5,6 @@ Make your expo apps start faster by loading fonts at build time
 
 `expo-font` load fonts at runtime. This increases the startup time
 
-### iOS ⚠️
-
-Currently it only works on Android. PRs for adding iOS support are welcome
-
 ### Installation ⚙️
 
 ```bash
@@ -20,7 +16,12 @@ Add to your plugins on `app.json`
 ```json
 {
   "name": "my app",
-  "plugins": ["with-expo-fonts"]
+  "plugins": [[
+    "with-expo-fonts",
+    {
+      path: "./assets/fonts",
+    },
+  ]]
 }
 ```
 
