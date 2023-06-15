@@ -1,0 +1,1 @@
+{"version":3,"file":"pluginConfigType.js","sourceRoot":"","sources":["../src/pluginConfigType.ts"],"names":[],"mappings":"","sourcesContent":["export interface PluginConfigType {\n  path: string;\n}\n"]}
