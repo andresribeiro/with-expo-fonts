@@ -1,3 +1,7 @@
+# 🚧 🚧 🚧
+
+`expo-fonts` has added support for [loading fonts at build time](https://docs.expo.dev/develop/user-interface/fonts/#use-a-custom-font), just like this library was doing.
+
 # with-expo-fonts
 Make your expo apps start faster by loading fonts at build time
 
